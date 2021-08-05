@@ -1,5 +1,5 @@
 {
-  "name": "@example/starter",
+  "name": "astro-pokedex",
   "version": "0.0.1",
   "private": true,
   "scripts": {

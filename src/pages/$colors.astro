@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import CategoryCard from '../components/CategoryCard.vue'
+
+export async function createCollection() {
+  const colors = [];
+  for (const index of Array(10).keys()) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon-color/${index + 1}`)
+    const result = await response.json() 
+    colors.push(result)
+  }
+
+  return {
+    route: '/colors/:color',
+    paths() {
+      return colors.map(color => ({params: {color: color.name}}))
+    },
+    async props({ params}) {
+      return {
+        color: colors.find(color => color.name === params.color),
+      }
+    }
+  }
+}
+
+const { color } = Astro.props
+const IMAGE_URL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/`
+
+const getPokemonImage = function (pokemon) {
+  const urlSplitted = pokemon.url.split('/')
+  const pokemonId = urlSplitted[urlSplitted.length - 2]
+
+  return `${IMAGE_URL}${pokemonId}.png`
+}
+
+---
+
+<BaseLayout title="{`Color ${color.name} - Astro Pokedex`}" description="{`Color ${color.name} - Astro Pokedex`}" prevHref="/">
+  <ul class="grid grid-cols-2">
+    {color.pokemon_species.map(pokemon =>
+      <li>
+        <CategoryCard
+          title={pokemon.name}
+          color={color.name}
+          href={`/pokemons/${pokemon.name}`}
+          image={getPokemonImage(pokemon)}
+        />
+      </li>
+    )}
+  </ul>
+</BaseLayout>

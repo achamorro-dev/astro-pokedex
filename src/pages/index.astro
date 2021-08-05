@@ -8,6 +8,8 @@ const colors = await response.json()
 
 <BaseLayout title="Astro Pokedex - Inicio" description="Pokedex creada con Astro.build">
   <div class="grid grid-cols-2">
-    {colors.results.map(color => <CategoryCard href={`/colors/${color.name}`} title={color.name} color={color.name} />)}
+    {colors.results.map(color =>
+      <CategoryCard href={`/colors/${color.name}`} title={color.name} color={color.name} />
+    )}
   </div>
 </BaseLayout>

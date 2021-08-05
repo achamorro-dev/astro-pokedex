@@ -24,6 +24,7 @@ export default {
     display:block;
     padding: 0.5rem 1.5rem;
     text-align: center;
+    max-width: 15rem;
   }
   .card.white {
     color: #222;

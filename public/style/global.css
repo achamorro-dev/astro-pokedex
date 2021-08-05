@@ -21,11 +21,15 @@ body {
   color: #222;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 main {
   display: grid;
   justify-content: center;
-  grid-auto-columns: 100%;
-  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -49,8 +53,8 @@ h3 {
   margin-bottom: .25rem;
 }
 
-.flex {
-  display: flex;
+.m-auto {
+  margin: 0 auto;
 }
 
 .grid {
@@ -111,13 +115,13 @@ h3 {
 .pill {
   font-size: .5rem;
   max-width: 5rem;
-  margin: 2rem;
 }
 
 .character-card {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .character-image-container {

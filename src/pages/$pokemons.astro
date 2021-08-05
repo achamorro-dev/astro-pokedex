@@ -64,6 +64,12 @@ const { pokemon } = Astro.props
   description="{`Pokémon ${pokemon.name} - Astro Pokedex`}"
   prevHref="{`/colors/${pokemon.color.name}`}"
 >
-  <CategoryCard pill href={`/colors/${pokemon.color.name}`} title={pokemon.color.name} color={pokemon.color.name} />
+  <CategoryCard
+    class="m-auto"
+    pill
+    href={`/colors/${pokemon.color.name}`}
+    title={pokemon.color.name}
+    color={pokemon.color.name}
+  />
   <CharacterCard pokemon={pokemon} />
 </BaseLayout>

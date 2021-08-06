@@ -98,7 +98,7 @@ h3 {
 
 .pink,
 .pink-before::before {
-  background-color: #8c346c;
+  background-color: #F42272;
 }
 
 .purple,
@@ -108,7 +108,7 @@ h3 {
 
 .red,
 .red-before::before {
-  background-color: #F7786B;
+  background-color: #e5383b;
 }
 
 .white,

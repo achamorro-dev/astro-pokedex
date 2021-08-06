@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import CategoryCard from '../components/CategoryCard.vue'
+import CategoryCard from '../components/CategoryCard.jsx'
 
 const response = await fetch('https://pokeapi.co/api/v2/pokemon-color')
 const colors = await response.json()

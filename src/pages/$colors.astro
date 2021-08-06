@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import CategoryCard from '../components/CategoryCard.vue'
+import CategoryCard from '../components/CategoryCard.jsx'
 
 export async function createCollection() {
   const colors = [];
   for (const index of Array(10).keys()) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon-color/${index + 1}`)
-    const result = await response.json() 
+    const result = await response.json()
     colors.push(result)
   }
 

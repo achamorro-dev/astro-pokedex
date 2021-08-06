@@ -1,14 +1,14 @@
 # Welcome to [Astro Pokedex](https://astro-pokedex.vercel.app/)
 
-<img src="https://img.shields.io/badge/build-success-green" />
-<a href="https://astro-pokedex.vercel.app/">
-  <img src="https://img.shields.io/badge/vercel-success-green" />
-</a>
-<a href="https://twitter.com/intent/follow?screen_name=achamorro_dev">
-  <img src="https://img.shields.io/twitter/follow/achamorro_dev?style=social" alt="Follow @achamorro_dev" />
-</a>
-<br/>
-<br/>
+<div style="flex">
+  <img src="https://img.shields.io/badge/build-success-green" />
+  <a href="https://astro-pokedex.vercel.app/">
+    <img src="https://img.shields.io/badge/vercel-success-green" />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=achamorro_dev">
+    <img src="https://img.shields.io/twitter/follow/achamorro_dev?style=social" alt="Follow @achamorro_dev" />
+  </a>
+</div>
 
 
 ## 🚀 Project

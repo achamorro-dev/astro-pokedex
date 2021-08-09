@@ -12,7 +12,7 @@ export default function CategoryCard({
     >
       <h2>{ title }</h2>
       {
-        image && <img src={image} alt={title} />
+        image && <img src={image} alt={title} loading="lazy" />
       }
     </a>
   )
